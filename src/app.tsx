@@ -4,8 +4,8 @@ import { GoogleMap, Marker, Wrapper } from './components/google-map';
 const GOOGLE_API_KEY = process.env.REACT_APP_GOOGLE_API_KEY || '';
 
 function App() {
-  const center = { lat: -34.397, lng: 150.644 };
-  const zoom = 4;
+  const center = { lat: -1.272941, lng: 36.8111434 };
+  const zoom = 18;
 
   return (
     <Wrapper apiKey={GOOGLE_API_KEY}>
