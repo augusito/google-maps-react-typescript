@@ -1,4 +1,4 @@
-export { default as GoogleMap } from './google-map';
+export { default as Map } from './map';
 export { default as Marker } from './marker';
 export { default as Wrapper } from './wrapper';
 // Constants

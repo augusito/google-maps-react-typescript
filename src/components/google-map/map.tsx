@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { GoogleMapProps } from './types';
 
-export default function GoogleMap({ children, center, zoom }: GoogleMapProps) {
+export default function Map({ children, center, zoom }: GoogleMapProps) {
   const ref = React.useRef<any>(null);
   const [map, setMap] = React.useState<google.maps.Map>();
 
