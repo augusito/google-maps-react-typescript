@@ -10,6 +10,24 @@ export interface MapProps {
   zoom?: number;
 }
 
+export type OverlayProps = React.PropsWithChildren<{
+  position: google.maps.LatLng | google.maps.LatLngLiteral;
+  pane?: keyof google.maps.MapPanes;
+  map: google.maps.Map;
+  zIndex?: number;
+  styles: any;
+}>;
+
+export interface PositionProps {
+  lat: number;
+  lng: number;
+}
+
+export interface CustomMarkerProps {
+  position: PositionProps;
+  map?: google.maps.Map;
+}
+
 export interface WrapperProps extends LoaderOptions {
   /**
    * Children wrapped by the `<Wrapper>{elements}</Wrapper`.
