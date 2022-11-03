@@ -1,18 +1,20 @@
 import * as React from 'react';
-import { GoogleMapProps } from './types';
+import { MapProps } from './types';
 
-export default function Map({ children, center, zoom }: GoogleMapProps) {
-  const ref = React.useRef<any>(null);
+export default function Map({ children, center, zoom }: MapProps) {
+  const ref = React.useRef<HTMLDivElement>(null);
   const [map, setMap] = React.useState<google.maps.Map>();
 
   React.useEffect(() => {
-    setMap(
-      new window.google.maps.Map(ref.current, {
-        center,
-        zoom,
-      })
-    );
-  }, [center, zoom]);
+    if (ref.current && !map) {
+      setMap(
+        new window.google.maps.Map(ref.current, {
+          center,
+          zoom,
+        })
+      );
+    }
+  }, [center, map, zoom]);
 
   return (
     <div ref={ref} id="map">

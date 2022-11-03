@@ -4,7 +4,7 @@ import { STATUS } from './constants';
 
 export type Status = keyof typeof STATUS;
 
-export interface GoogleMapProps {
+export interface MapProps {
   children?: React.ReactNode;
   center?: google.maps.LatLngLiteral;
   zoom?: number;

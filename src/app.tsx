@@ -1,5 +1,5 @@
 import './app.css';
-import { GoogleMap, Marker, Wrapper } from './components/google-map';
+import { Map, Marker, Wrapper } from './components/map';
 
 const GOOGLE_API_KEY = process.env.REACT_APP_GOOGLE_API_KEY || '';
 
@@ -9,9 +9,9 @@ function App() {
 
   return (
     <Wrapper apiKey={GOOGLE_API_KEY}>
-      <GoogleMap center={center} zoom={zoom}>
+      <Map center={center} zoom={zoom}>
         <Marker position={center} title="Hello World!" />
-      </GoogleMap>
+      </Map>
     </Wrapper>
   );
 }
